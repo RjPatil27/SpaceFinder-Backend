@@ -1,0 +1,28 @@
+{
+  "name": "spacefinder-backend",
+  "version": "1.0.0",
+  "description": "Backend for CDK Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RjPatil27/SpaceFinder-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RjPatil27/SpaceFinder-Backend/issues"
+  },
+  "homepage": "https://github.com/RjPatil27/SpaceFinder-Backend#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "aws-cdk": "^2.56.1",
+    "aws-cdk-lib": "^2.56.1",
+    "constructs": "^10.1.201",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
