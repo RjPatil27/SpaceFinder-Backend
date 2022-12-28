@@ -17,7 +17,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d60ccfe2d5996158cbdda1204005e0dd07d3e6b4f80e75d6f941f8fe8dff2439.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/d1b2046e71d0669730993f17e82dd5b90281b95c3d23a9e427db56b654ecdd42.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -34,6 +34,18 @@
         "Space-finder.assets"
       ],
       "metadata": {
+        "/Space-finder/helloLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambdaServiceRoleBB046714"
+          }
+        ],
+        "/Space-finder/helloLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "helloLambda79DCE371"
+          }
+        ],
         "/Space-finder/CDKMetadata/Default": [
           {
             "type": "aws:cdk:logicalId",

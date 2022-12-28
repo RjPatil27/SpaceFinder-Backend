@@ -1,10 +1,9 @@
 
 
 
-export async function main(event, context){
+exports.main = async function(event,context) {
     return {
-        stausCode: 200,
-        body: "Hello From, Lambda!!"
+        statusCode: 200,
+        body: "Hello From Lambda!!"
     }
 }
-

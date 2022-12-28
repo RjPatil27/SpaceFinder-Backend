@@ -1,9 +1,71 @@
 {
  "Resources": {
+  "helloLambdaServiceRoleBB046714": {
+   "Type": "AWS::IAM::Role",
+   "Properties": {
+    "AssumeRolePolicyDocument": {
+     "Statement": [
+      {
+       "Action": "sts:AssumeRole",
+       "Effect": "Allow",
+       "Principal": {
+        "Service": "lambda.amazonaws.com"
+       }
+      }
+     ],
+     "Version": "2012-10-17"
+    },
+    "ManagedPolicyArns": [
+     {
+      "Fn::Join": [
+       "",
+       [
+        "arn:",
+        {
+         "Ref": "AWS::Partition"
+        },
+        ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+       ]
+      ]
+     }
+    ]
+   },
+   "Metadata": {
+    "aws:cdk:path": "Space-finder/helloLambda/ServiceRole/Resource"
+   }
+  },
+  "helloLambda79DCE371": {
+   "Type": "AWS::Lambda::Function",
+   "Properties": {
+    "Code": {
+     "S3Bucket": {
+      "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
+     },
+     "S3Key": "d22b57f079cfa4ff67e8e0fe275b164e4b2c68459178754d667e9c612cb915e3.zip"
+    },
+    "Role": {
+     "Fn::GetAtt": [
+      "helloLambdaServiceRoleBB046714",
+      "Arn"
+     ]
+    },
+    "Handler": "hello.main",
+    "Runtime": "nodejs18.x"
+   },
+   "DependsOn": [
+    "helloLambdaServiceRoleBB046714"
+   ],
+   "Metadata": {
+    "aws:cdk:path": "Space-finder/helloLambda/Resource",
+    "aws:asset:path": "asset.d22b57f079cfa4ff67e8e0fe275b164e4b2c68459178754d667e9c612cb915e3",
+    "aws:asset:is-bundled": false,
+    "aws:asset:property": "Code"
+   }
+  },
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zPSMzXTM1RMLC/WTU7J1s3JTNKrDi5JTM7WcU7LC0otzi8tSk4FsZ3z81IySzLz82p18vJTUvWyivXLDIFajfWMFLOKMzN1i0rzSjJzU/WCIDQATnAfhlkAAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/zWOSw6DMAxEz8I+uALU7gtSD0APgEySIvNxJJy0i4i7N4BYzXierJkS7g8oMvxJrs2Uz9RDfHvUk0pRF2dceoMQX4G1J8eq+fDlN0W4QGzdbPd4101J1aGI9QLPXdINddCT9TVKwq0VF1Zt1UFT0UA8HN8XSL5xbOhsYGcsjHL7FmllBWU2ClG+Bva0WGhP/QO+nR+xxAAAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "Space-finder/CDKMetadata/Default"

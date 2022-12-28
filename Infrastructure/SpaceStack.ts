@@ -14,7 +14,7 @@ export class SpaceStack extends Stack {
     // Create Lambda resource
     readonly helloLambda = new LambdaFunction(this, 'helloLambda',{
         runtime : Runtime.NODEJS_18_X,
-        code : Code.fromAsset(join(__dirname,'..','services','UnderstandLambdas','hello')),
+        code : Code.fromAsset(join(__dirname,'..','services','UnderstandLambdas')),
         handler: 'hello.main'
     })
 
