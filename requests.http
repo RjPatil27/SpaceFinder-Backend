@@ -1,0 +1,6 @@
+
+@endpoint = https://zs0qgldmfi.execute-api.us-east-1.amazonaws.com/prod
+
+# GET https://zs0qgldmfi.execute-api.us-east-1.amazonaws.com/prod/hey
+GET {{endpoint}}/hey/
+###
